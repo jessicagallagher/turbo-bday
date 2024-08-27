@@ -1,6 +1,8 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 export default function DancingCat() {
   const [hiddenDancing, setHiddenDancing] = useState(false);
@@ -61,6 +63,12 @@ export default function DancingCat() {
         <h3 className='mt-14 mx-14 text-center'>
           Happy birthday to one of my favorite people! I hope that you have a wonderful day full of Stripey snuggles, cake, and ice cream!
         </h3>
+      </div>
+      <div className='mt-4'>
+        <AudioPlayer
+          autoPlay={true}
+          src='/music/golden_girls.mp3'
+        />
       </div>
     </>
   );
